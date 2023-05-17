@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BottomNavigatioNViewActive" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="itemIconSize">33dp</item>
+    </style>
+    <style name="BottomNavigatioNViewInActive" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextColor">@color/colorInactive</item>
+        <item name="android:textStyle">bold</item>
+        <item name="itemIconSize">28dp</item>
+    </style>
+
+    <color name="colorInactive">#83939B</color>
+</resources>

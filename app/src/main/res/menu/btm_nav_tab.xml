@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_refine"
+        android:icon="@drawable/ic_refine_checked"
+        android:title="Refine" />
+    <item
+        android:id="@+id/nav_explore"
+        android:icon="@drawable/ic_explore_unchecked"
+        android:title="Explore" />
+</menu>

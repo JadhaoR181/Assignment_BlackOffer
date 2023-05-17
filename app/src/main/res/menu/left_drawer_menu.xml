@@ -1,0 +1,53 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/edit_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="Edit Profile" />
+        <item
+            android:id="@+id/my_network"
+            android:icon="@drawable/ic_network"
+            android:title="My Network"/>
+        <item
+            android:id="@+id/switch_professional"
+            android:icon="@drawable/ic_switch_professional"
+            android:title="Switch to Professional"/>
+        <item
+            android:id="@+id/switch_merchant"
+            android:icon="@drawable/ic_switch_merchant"
+            android:title="Switch to Merchant"/>
+        <item
+            android:id="@+id/dating"
+            android:icon="@drawable/ic_dating"
+            android:title="Dating"/>
+        <item
+            android:id="@+id/matrimony"
+            android:icon="@drawable/ic_matrimony"
+            android:title="Matrimony"/>
+        <item
+            android:id="@+id/buy_sell_rent"
+            android:icon="@drawable/ic_buy_sell_rent"
+            android:title="Buy-Sell-Rent"/>
+        <item
+            android:id="@+id/jobs"
+            android:icon="@drawable/ic_jobs"
+            android:title="Jobs"/>
+        <item
+            android:id="@+id/business_cards"
+            android:icon="@drawable/ic_business_cards"
+            android:title="Business Cards"/>
+        <item
+            android:id="@+id/hashttags"
+            android:icon="@drawable/ic_hashtags"
+            android:title="Hashtags"/>
+        <item
+            android:id="@+id/notes"
+            android:icon="@drawable/ic_notes"
+            android:title="Notes"/>
+        <item
+            android:id="@+id/live_locations"
+            android:icon="@drawable/ic_live_locations"
+            android:title="Live Locations"/>
+    </group>
+
+</menu>
