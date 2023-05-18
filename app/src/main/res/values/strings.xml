@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">BlackOffferAssignment</string>
     <string name="profile_image">profile_image</string>
-    <string name="user_name">user_name</string>
+    <string name="user_name">Ravindra Jadhav</string>
     <string name="navigation_drawer_open">Navigation Drawer Opened</string>
     <string name="navigation_drawer_close">Navigation Drawer Closed</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_id">RRVASAA0001000</string>
+    <string name="user_availability">Available</string>
 </resources>
