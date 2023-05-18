@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 
         // Set the profile image and user name
         profileImage.setImageResource(R.drawable.profile_image)
-        userName.text = "John Doe"
+        userName.text = "Ravindra Jadhav"
 
         left_navigationView.setNavigationItemSelectedListener { menuItem ->
             // Handle left drawer item clicks here

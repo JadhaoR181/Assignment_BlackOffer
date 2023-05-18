@@ -6,5 +6,6 @@
     <color name="light_ripple_color">#959596</color>
     <color name="drawer_item_icon_color">#031163</color>
     <color name="drawer_item_text_color">#000000</color>
-    <color name="your_thumb_tint_color">#1A237E</color> <!-- Light color for the ripple effect -->
+    <color name="your_thumb_tint_color">#1A237E</color>
+    <color name="grey">#7E7E7E</color> <!-- Light color for the ripple effect -->
 </resources>
