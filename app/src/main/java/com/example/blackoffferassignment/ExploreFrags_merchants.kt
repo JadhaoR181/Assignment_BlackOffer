@@ -5,55 +5,49 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ExploreFrags_merchants.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ExploreFrags_merchants : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: switchMerchantAdapter
+    private val merchant = listOf(
+        switchMerchantModel("Ravindra Jadhav", "RJ","Mumbai, within 1-3Km", "Hi community! We have a great deals for you check this out!",
+             60),
+        switchMerchantModel("Ritesh Gupta", "RG","Thane, within 4-5Km", "Hi community! We have a great deals for you check this out!",
+             60),
+        switchMerchantModel("Ayesh Bramsi", "AB", "Bangalore, within 5-6Km","Hi community! We have a great deals for you check this out!",
+             70),
+        switchMerchantModel("Sahil Kirloskar", "SK", "Nashik, within 6-7Km", "Hi community! We have a great deals for you check this out!",
+             20),
+        switchMerchantModel("Palak Jha", "PJ", "Navi Mumbai, within 2-3Km", "Hi community! We have a great deals for you check this out!",
+             20),
+        switchMerchantModel("Ritesh Gupta", "RG", "Navi Mumbai, within 5-7Km", "Hi community! We have a great deals for you check this out!",
+             60),
+        switchMerchantModel("Ayesh Bramsi", "AB", "Andheri, within 5-7Km", "Hi community! We have a great deals for you check this out!",
+             70),
+        switchMerchantModel("Sahil Kirloskar", "SK", "Andheri, within 6-9Km", "Hi community! We have a great deals for you check this out!",
+             20),
+        switchMerchantModel("Palak Jha", "PJ", "Dadar, within 4-8Km", "Hi community! We have a great deals for you check this out!",
+             20),
+        switchMerchantModel("Johny Singh", "JS", "Dadar, within 2-5Km", "Hi community! We have a great deals for you check this out!",
+             50)
+        ,
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+        // Add more user data as needed
+    )
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_explore_frags_merchants, container, false)
-    }
+        val rootview =  inflater.inflate(R.layout.fragment_explore_frags_merchants, container, false)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ExploreFrags_merchants.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ExploreFrags_merchants().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        recyclerView = rootview.findViewById(R.id.recyclermerchant)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        adapter = switchMerchantAdapter(merchant)
+        recyclerView.adapter = adapter
+        return rootview;
     }
 }

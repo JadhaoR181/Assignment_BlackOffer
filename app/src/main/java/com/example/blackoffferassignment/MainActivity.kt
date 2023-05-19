@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
 
 
         // Set the profile image and user name
-        profileImage.setImageResource(R.drawable.profile_image)
+        profileImage.setImageResource(R.drawable.ic_user)
         userName.text = "Ravindra Jadhav"
 
         left_navigationView.setNavigationItemSelectedListener { menuItem ->

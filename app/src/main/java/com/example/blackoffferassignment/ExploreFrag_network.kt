@@ -5,55 +5,48 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ExploreFrag_network.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ExploreFrag_network : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: userNetworkAdapter
+    private val userList = listOf(
+        userNetworkModel("Ravindra Jadhav", "RJ", "Mumbai, within 1-2Km", "Coffee | Business | Friendship",
+            "Hi community, I am open to new connections \uD83D\uDE42", 60),
+        userNetworkModel("Johny Singh", "JS", "Thane, within 300-400m", "Coffee | Business | Friendship",
+            "Hi community, I am open to new connections \uD83D\uDE42", 50),
+        userNetworkModel("Ayesh Bramsi", "AB", "Navi Mumbai, within 5-7km", "Coffee | Business | Friendship",
+            "Hi community, I am open to new connections \uD83D\uDE42", 70),
+        userNetworkModel("Sahil Kirloskar", "SK", "Mumbai, within 600-700m", "Coffee | Business | Friendship",
+            "Hi community, I am open to new connections \uD83D\uDE42", 20),
+        userNetworkModel("Ritesh Gupta", "RG", "Mumbai, within 600-700m", "Coffee | Business | Friendship",
+            "Hi community, I am open to new connections \uD83D\uDE42", 60),
+        userNetworkModel("Palak Jha", "PJ", "Mumbai, within 600-700m", "Coffee | Business | Friendship",
+            "Hi community, I am open to new connections \uD83D\uDE42", 70),
+        userNetworkModel("Raj Dey", "RD", "Mumbai, within 600-700m", "Coffee | Business | Friendship",
+            "Hi community, I am open to new connections \uD83D\uDE42", 40),
+        userNetworkModel("Jyoti Vishwakarma", "JV", "Mumbai, within 600-700m", "Coffee | Business | Friendship",
+            "Hi community, I am open to new connections \uD83D\uDE42", 60),
+        userNetworkModel("Diksha Bhandare", "DB", "Mumbai, within 600-700m", "Coffee | Business | Friendship",
+            "Hi community, I am open to new connections \uD83D\uDE42", 80),
+        userNetworkModel("Sankte Dhage", "SD", "Mumbai, within 600-700m", "Coffee | Business | Friendship",
+            "Hi community, I am open to new connections \uD83D\uDE42", 30)
+        // Add more user data as needed
+    )
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_explore_frag_network, container, false)
-    }
+        val rootview =  inflater.inflate(R.layout.fragment_explore_frag_network, container, false)
+        recyclerView = rootview.findViewById(R.id.recyclernetwork)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        adapter = userNetworkAdapter(userList)
+        recyclerView.adapter = adapter
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ExploreFrag_network.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ExploreFrag_network().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        return rootview;
     }
 }
